@@ -35,13 +35,44 @@ h2
     margin: auto;
     border-style: solid;
     border-color: blueviolet;
-    
-
-
 }
 /*-------------------------------------------------------------------------*/
+
+.book_list
+{
+    display: block;
+
+}
+
+
 /*-------------------------------------------------------------------------*/
+
+#list_form
+{
+    width: 340px;
+    display:block;
+    justify-content: center;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 5px;
+}
 /*-------------------------------------------------------------------------*/
+#dynamic_list li
+{
+    list-style-type: none;
+    text-align: center;
+    margin: 0px;
+}
+/*-------------------------------------------------------------------------*/
+#dynamic_list 
+{
+    text-align: center;
+    padding: 0px;
+}
 /*-------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------*/

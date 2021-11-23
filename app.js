@@ -1,7 +1,6 @@
 function get_name()
 {
     const name = document.getElementById("book_input").value;
-
     console.log('Nombre del libro: ', name);
 
     let stored_books = JSON.parse(localStorage.getItem("n_book"));
@@ -12,6 +11,8 @@ function get_name()
     stored_books.push(name);
     localStorage.setItem("n_book", JSON.stringify(stored_books));
     set_name();
+    clear();
+    
 }
 
 /*-------------------------------------------------------------------------*/
@@ -25,15 +26,23 @@ function print()
 
 function set_name()
 {
-    const get_books = JSON.parse(localStorage.getItem("n_book"));
+    var list = document.getElementById("dynamic_list");
+    list.innerHTML = "";
+    let get_books = JSON.parse(localStorage.getItem("n_book"));
     for(var i = 0; i < get_books.length;i++)
     {
-        
-    console.log('Nombre del libro: ', get_books[i]);
-    document.getElementById
+    var new_li = document.createElement("li"); 
+    new_li.textContent = get_books[i];
+    list.appendChild(new_li);
     }
 }
 /*-------------------------------------------------------------------------*/
+
+function clear()
+{
+    document.getElementById("book_input").innerHTML = "Type the Book's Name";
+}
+
 /*-------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------*/
